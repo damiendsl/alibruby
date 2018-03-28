@@ -1,11 +1,11 @@
-<h1>Add a category</h1>
-<%= form_for :post, url: categories_path do |c|  %>
+<h1>Add a categorie</h1>
+<%= form_for :categorie, url: categories_path do |c|  %>
     <p>
         <%= c.label :title %><br/>
-        <%=c.text_field :title %>
+        <%=c.text_field( :title,{:class => 'form-control'}) %>
     </p>
     <p>
-        <%= c.submit %>
+        <%= c.submit({:class=>'btn btn-primary'}) %>
     </p>
     
 <% end %>
