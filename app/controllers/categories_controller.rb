@@ -6,6 +6,6 @@ class CategoriesController < ApplicationController
     
     end
     def create
-        render plain: params[:category].inspect
+        render plain: params[:post].inspect
     end
 end

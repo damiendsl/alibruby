@@ -1,5 +1,5 @@
 <h1>Add a category</h1>
-<%= form_for :category, url: categories_path do |c|  %>
+<%= form_for :post, url: categories_path do |c|  %>
     <p>
         <%= c.label :title %><br/>
         <%=c.text_field :title %>
