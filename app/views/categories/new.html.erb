@@ -1,5 +1,10 @@
 <h1>Add a categorie</h1>
-<%= form_for :categorie, url: categories_path do |c|  %>
+<%= form_for :category, url: categories_path do |c|  %>
+    <% if @category.errors.any? %>
+      <% @category.errors.full_messages.each do |error| %>
+        <div class="alert alert-danger"><%= error %></div>
+      <% end %>
+  <% end %>
     <p>
         <%= c.label :title %><br/>
         <%=c.text_field( :title,{:class => 'form-control'}) %>
